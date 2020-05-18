@@ -22,8 +22,8 @@
       <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
         Pertanyaan
       </label>
-      <p class="text-blue-700 text-xs">dipisah dengan koma ","</p>
-      <p class="text-blue-700 text-xs">contoh: Lingkaran, Stoikiometri, Pajak</p>
+      <p class="text-blue-700 text-xs">dipisah dengan "|"</p>
+      <p class="text-blue-700 text-xs">contoh: Lingkaran | Stoikiometri | Pajak</p>
       <br>
       <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="question" type="text" placeholder="Pertanyaan" style="height:5em"></textarea>
     </div>
@@ -59,7 +59,7 @@
 		if(!question){
 			alert('pertanyaan kosong!')
 		}else{
-			var questionArray=question.split(',');
+			var questionArray=question.split('|');
 			for(i=0;i<questionArray.length;i++){
 				window.open(url+''+prefix+' '+questionArray[i])
 			}
